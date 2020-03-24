@@ -53,7 +53,7 @@ void Quaternion::to_euler_rotation(double *roll, double *pitch, double *yaw) {
  // pitch (y-axis rotation)
  double sinp = 2 * (a * c - d * b);
  if (std::abs(sinp) >= 1)	// use +/-90 degrees if out of range
-	if ( simp > 0)
+	if ( sinp > 0)
 		*pitch = M_PI / 2; 
 	else
 		*pitch = -1 * (M_PI / 2); 
